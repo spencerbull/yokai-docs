@@ -1,0 +1,8 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+<Default {...Astro.props}><slot /></Default>
+<div class="sl-flex" style="justify-content: center; padding: 1rem; color: var(--sl-color-gray-3); font-size: 0.85rem;">
+	Built by Spencer Bull
+</div>

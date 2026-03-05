@@ -1,40 +1,93 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: "One Binary. All Your GPUs."
+description: "Deploy, monitor, and manage LLM inference across every GPU in your fleet — from a single terminal."
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: "Deploy, monitor, and manage LLM inference across every GPU in your fleet — from a single terminal."
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /yokai-docs/getting-started/installation/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: View on GitHub
+      link: https://github.com/spencerbull/Yokai
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+<div class="terminal-mockup">
+<pre>
+<span class="blue">yokai</span> <span class="dim">v0.1.0</span>                                     <span class="dim">fleet: 4 devices | 12 GPUs</span>
+<span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+<span class="green"> SERVICES</span>                  <span class="blue">DEVICE</span>          <span class="yellow">GPU</span>     <span class="cyan">VRAM</span>      <span class="magenta">STATUS</span>
+<span class="dim">─────────────────────────────────────────────────────────────────────────────</span>
+ <span class="green">vllm/Qwen3-32B</span>          gpu-box-01      A100    72/80GB   <span class="green">● running</span>
+ <span class="green">vllm/DeepSeek-R1</span>        gpu-box-02      H100    68/80GB   <span class="green">● running</span>
+ <span class="green">llama.cpp/Llama-3.3</span>     homelab-3090    3090    18/24GB   <span class="green">● running</span>
+ <span class="yellow">comfyui/flux</span>             homelab-4090    4090    14/24GB   <span class="yellow">● deploying</span>
+<span class="dim">─────────────────────────────────────────────────────────────────────────────</span>
+ <span class="dim">GPU Utilization</span>  <span class="green">▂▃▅▇█▇▅▃▂▃▅▇███▇▅▃▂</span>  avg: <span class="green">73%</span>
+ <span class="dim">VRAM Usage</span>       <span class="blue">████████████████░░░░</span>  172/208 GB
+ <span class="dim">Temperature</span>      <span class="yellow">▂▃▃▄▅▅▄▃▃▄▅▆▅▄▃▂▂▃</span>  avg: <span class="yellow">62C</span>
+ <span class="dim">Power Draw</span>       <span class="red">▃▄▅▆▇█▇▆▅▅▆▇█▇▆▅▄▃</span>  avg: <span class="red">285W</span>
+<span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+ <span class="dim">n</span>=deploy  <span class="dim">s</span>=stop  <span class="dim">r</span>=restart  <span class="dim">l</span>=logs  <span class="dim">d</span>=devices  <span class="dim">g</span>=grafana  <span class="dim">?</span>=help  <span class="dim">q</span>=quit
+</pre>
+</div>
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+<div class="feature-grid">
+<div class="feature-card">
+
+### Zero Dependencies
+
+Single binary, no Python, no npm. SCP to any machine and go.
+
+</div>
+<div class="feature-card">
+
+### btop-style Dashboard
+
+Live GPU utilization, VRAM, temperature, power draw. Sparklines and stream charts.
+
+</div>
+<div class="feature-card">
+
+### Deploy in Seconds
+
+Guided wizard: pick workload type, device, image, model — done.
+
+</div>
+<div class="feature-card">
+
+### Fleet-Wide Monitoring
+
+Prometheus + Grafana auto-deployed. One key opens your dashboard.
+
+</div>
+<div class="feature-card">
+
+### AI Tool Integration
+
+Auto-configure VS Code Copilot, OpenCode, and OpenClaw with one keystroke.
+
+</div>
+<div class="feature-card">
+
+### Tailscale Native
+
+Discover and connect to GPU machines across your Tailscale mesh automatically.
+
+</div>
+</div>
+
+<div class="quickstart-section">
+
+## Quick Start
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/spencerbull/Yokai/main/install.sh | sh
+yokai
+```
+
+</div>
