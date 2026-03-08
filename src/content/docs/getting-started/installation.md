@@ -11,7 +11,7 @@ Yokai ships as a single binary with zero dependencies. Pick your preferred insta
 curl -fsSL https://raw.githubusercontent.com/spencerbull/Yokai/main/install.sh | sh
 ```
 
-This detects your OS and architecture, downloads the latest release, and installs to `/usr/local/bin/yokai`.
+The install script features ASCII art and colored terminal output to guide you through the process. It detects your OS and architecture, downloads the latest release, and installs to `/usr/local/bin/yokai`.
 
 ## From GitHub Releases
 
@@ -24,6 +24,7 @@ Download the appropriate binary from the [releases page](https://github.com/spen
 | macOS          | amd64       | `yokai-darwin-amd64`         |
 | macOS          | arm64       | `yokai-darwin-arm64`         |
 | Windows        | amd64       | `yokai-windows-amd64.exe`   |
+| Windows        | arm64       | `yokai-windows-arm64.exe`   |
 
 ```bash
 # Example: Linux amd64
@@ -34,7 +35,7 @@ sudo mv yokai-linux-amd64 /usr/local/bin/yokai
 
 ## Build from Source
 
-Requires Go 1.21+:
+Requires Go 1.25+:
 
 ```bash
 git clone https://github.com/spencerbull/Yokai.git

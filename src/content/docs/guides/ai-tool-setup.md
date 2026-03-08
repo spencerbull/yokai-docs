@@ -9,11 +9,23 @@ Press `c` from the dashboard to open the AI tool configuration wizard.
 
 Yokai can auto-configure your development tools to use the LLM inference endpoints you've deployed. This means your local coding assistants use your own GPU fleet instead of cloud APIs.
 
+## Multi-Select Interface
+
+The AI tool configuration uses a multi-select checkbox interface. When you press `c`:
+
+1. A list of available tools appears with checkboxes
+2. Use `j` / `k` to navigate between tools
+3. Press `Space` or `Enter` to toggle a tool on/off
+4. Select as many tools as you want in one pass
+5. Press `Enter` to configure all selected tools at once
+
+This lets you set up multiple tools simultaneously rather than configuring them one at a time.
+
 ## VS Code Copilot
 
 Yokai generates the VS Code settings to point GitHub Copilot at your self-hosted vLLM endpoint:
 
-1. Press `c` and select **VS Code Copilot**
+1. Press `c` and toggle **VS Code Copilot** on
 2. Choose which deployed vLLM service to use
 3. Yokai writes the configuration to your VS Code `settings.json`
 
@@ -23,7 +35,7 @@ The generated config sets up the OpenAI-compatible endpoint that vLLM exposes, s
 
 [OpenCode](https://github.com/opencode-ai/opencode) is a terminal-based AI coding assistant.
 
-1. Press `c` and select **OpenCode**
+1. Press `c` and toggle **OpenCode** on
 2. Choose your vLLM service
 3. Yokai generates the OpenCode configuration
 
@@ -33,7 +45,7 @@ OpenCode will connect to your self-hosted model through the SSH tunnel Yokai mai
 
 [OpenClaw](https://github.com/spencerbull/OpenClaw) is a fleet-aware AI development tool.
 
-1. Press `c` and select **OpenClaw**
+1. Press `c` and toggle **OpenClaw** on
 2. Yokai automatically configures OpenClaw with all available endpoints
 3. OpenClaw can load-balance across multiple models in your fleet
 

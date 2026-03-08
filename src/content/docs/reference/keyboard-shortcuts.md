@@ -15,6 +15,7 @@ description: Full keybind reference for all Yokai TUI views.
 | `g`       | Open Grafana dashboard              |
 | `c`       | Open AI tool configuration          |
 | `j` / `k` | Navigate down / up in service list |
+| `Tab`     | Switch between tab bar views        |
 | `Enter`   | View service details                |
 | `?`       | Show help overlay                   |
 | `q`       | Quit Yokai                          |
@@ -50,6 +51,15 @@ description: Full keybind reference for all Yokai TUI views.
 | `f`       | Toggle follow mode        |
 | `/`       | Search in logs            |
 | `Esc`     | Return to dashboard       |
+
+## AI Tool Configuration
+
+| Key       | Action                    |
+|-----------|---------------------------|
+| `j` / `k` | Navigate tool list        |
+| `Space`   | Toggle tool selection     |
+| `Enter`   | Toggle selection / confirm all |
+| `Esc`     | Cancel                    |
 
 ## Global
 

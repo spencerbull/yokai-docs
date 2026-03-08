@@ -20,17 +20,18 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 <pre>
 <span class="blue">yokai</span> <span class="dim">v0.1.0</span>                                     <span class="dim">fleet: 4 devices | 12 GPUs</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+ <span class="blue">[ Services ]</span>  <span class="dim">GPUs</span>  <span class="dim">Metrics</span>                               <span class="dim">Tab = switch view</span>
+<span class="dim">─────────────────────────────────────────────────────────────────────────────</span>
 <span class="green"> SERVICES</span>                  <span class="blue">DEVICE</span>          <span class="yellow">GPU</span>     <span class="cyan">VRAM</span>      <span class="magenta">STATUS</span>
-<span class="dim">─────────────────────────────────────────────────────────────────────────────</span>
  <span class="green">vllm/Qwen3-32B</span>          gpu-box-01      A100    72/80GB   <span class="green">● running</span>
- <span class="green">vllm/DeepSeek-R1</span>        gpu-box-02      H100    68/80GB   <span class="green">● running</span>
+ <span class="dim">vllm/DeepSeek-R1</span>        gpu-box-02      H100    68/80GB   <span class="green">● running</span>
  <span class="green">llama.cpp/Llama-3.3</span>     homelab-3090    3090    18/24GB   <span class="green">● running</span>
- <span class="yellow">comfyui/flux</span>             homelab-4090    4090    14/24GB   <span class="yellow">● deploying</span>
+ <span class="dim">comfyui/flux</span>             homelab-4090    4090    14/24GB   <span class="yellow">◐ deploying</span>
 <span class="dim">─────────────────────────────────────────────────────────────────────────────</span>
- <span class="dim">GPU Utilization</span>  <span class="green">▂▃▅▇█▇▅▃▂▃▅▇███▇▅▃▂</span>  avg: <span class="green">73%</span>
- <span class="dim">VRAM Usage</span>       <span class="blue">████████████████░░░░</span>  172/208 GB
- <span class="dim">Temperature</span>      <span class="yellow">▂▃▃▄▅▅▄▃▃▄▅▆▅▄▃▂▂▃</span>  avg: <span class="yellow">62C</span>
- <span class="dim">Power Draw</span>       <span class="red">▃▄▅▆▇█▇▆▅▅▆▇█▇▆▅▄▃</span>  avg: <span class="red">285W</span>
+ <span class="dim">GPU Utilization</span>  <span class="green">⣀⣤⣶⣿⣿⣶⣤⣀⣤⣶⣿⣿⣿⣶⣤⣀</span>  avg: <span class="green">73%</span>
+ <span class="dim">VRAM Usage</span>       <span class="blue">█████████████▆▃░░░░░</span>  172/208 GB
+ <span class="dim">Temperature</span>      <span class="yellow">⣀⣤⣤⣴⣶⣶⣴⣤⣤⣴⣶⣷⣶⣴⣤⣀⣀⣤</span>  avg: <span class="yellow">62C</span>
+ <span class="dim">Power Draw</span>       <span class="red">⣤⣴⣶⣷⣿⣿⣿⣷⣶⣶⣷⣿⣿⣿⣷⣶⣴⣤</span>  avg: <span class="red">285W</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
  <span class="dim">n</span>=deploy  <span class="dim">s</span>=stop  <span class="dim">r</span>=restart  <span class="dim">l</span>=logs  <span class="dim">d</span>=devices  <span class="dim">g</span>=grafana  <span class="dim">?</span>=help  <span class="dim">q</span>=quit
 </pre>
@@ -46,9 +47,9 @@ Single binary, no Python, no npm. SCP to any machine and go.
 </div>
 <div class="feature-card">
 
-### btop-style Dashboard
+### btop-inspired Dashboard
 
-Live GPU utilization, VRAM, temperature, power draw. Sparklines and stream charts.
+Live GPU utilization, VRAM, temperature, power draw. Streamline charts, bar graphs, and unicode progress bars.
 
 </div>
 <div class="feature-card">

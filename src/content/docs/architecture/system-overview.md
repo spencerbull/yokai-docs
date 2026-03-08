@@ -12,7 +12,7 @@ Yokai uses a three-tier architecture: **TUI**, **Daemon**, and **Agent**.
 │   TUI (Bubbletea) │  ← You interact here
 │   Terminal UI      │
 └────────┬─────────┘
-         │ gRPC / local
+         │ HTTP REST (localhost:7473)
 ┌────────▼─────────┐
 │   Daemon          │  ← Runs on your machine
 │   - SSH tunnels   │
@@ -39,7 +39,7 @@ The TUI is what you see when you run `yokai`. Built with [Bubbletea](https://git
 - Service control (start, stop, restart, logs)
 - AI tool configuration
 
-The TUI communicates with the local daemon process. It renders at your terminal's refresh rate with responsive layouts.
+The TUI communicates with the daemon via HTTP REST on `localhost:7473`. It renders at your terminal's refresh rate with responsive layouts.
 
 ## Daemon
 

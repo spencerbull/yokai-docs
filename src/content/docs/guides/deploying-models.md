@@ -36,7 +36,7 @@ Yokai deploys ComfyUI with GPU passthrough and exposes the web interface.
 
 ## Deployment Wizard
 
-The wizard walks you through each step:
+The wizard walks you through each step. Text fields support full editing with backspace and clipboard paste (`Ctrl+V`).
 
 ### 1. Select Workload Type
 Choose between vLLM, llama.cpp, or ComfyUI.

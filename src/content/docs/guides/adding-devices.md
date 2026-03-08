@@ -3,7 +3,7 @@ title: Adding Devices
 description: How to connect GPU machines to your Yokai fleet.
 ---
 
-Yokai supports three methods for discovering and connecting GPU machines.
+Yokai supports four methods for discovering and connecting GPU machines.
 
 ## LAN Discovery
 
@@ -30,6 +30,17 @@ If you use [Tailscale](https://tailscale.com), Yokai can automatically discover 
    ```
 2. Press `d` then `a` and select **Tailscale**
 3. Yokai queries the Tailscale API and lists machines matching your tag filter
+
+## SSH Config Discovery
+
+Yokai can parse your `~/.ssh/config` file and show known hosts during device onboarding.
+
+1. Press `d` then `a` and select **SSH Config**
+2. Yokai reads your `~/.ssh/config` and lists configured hosts
+3. Select a host — connection details (hostname, port, user, identity file) are pre-filled from your SSH config
+4. Yokai probes the host for GPU availability
+
+This is the fastest way to add machines you already have SSH access to, since you don't need to re-enter connection details.
 
 ## Manual Connection
 

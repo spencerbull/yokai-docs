@@ -5,13 +5,16 @@ description: Dashboard overview, Grafana integration, and metrics.
 
 ## TUI Dashboard
 
-The main Yokai screen is a btop-style dashboard showing real-time fleet metrics:
+The main Yokai screen is a btop-inspired grid layout with a centered max-width container, showing real-time fleet metrics:
 
-- **Services table** — All deployed models with device, GPU, VRAM, and status
-- **GPU utilization sparklines** — Rolling history of GPU usage across the fleet
-- **VRAM usage bar** — Total and per-device memory consumption
+- **Services table** — All deployed models with device, GPU, VRAM, and status. Features alternating row colors and status color coding for quick scanning
+- **GPU utilization charts** — ntcharts streamline charts replacing basic sparklines for smoother, more detailed rolling history
+- **GPU panels** — Dedicated panels with bar charts showing utilization visually per device
+- **VRAM usage bar** — Fractional unicode block progress bars for more granular visualization of memory consumption
 - **Temperature chart** — GPU temperatures with color-coded thresholds
 - **Power draw chart** — Wattage across all GPUs
+- **Tab bar navigation** — Switch between dashboard views using the tab bar component
+- **Animated states** — Spinner and loading animations during deployments and operations
 
 Metrics refresh every 2 seconds (configurable via `preferences.refresh_interval`).
 
